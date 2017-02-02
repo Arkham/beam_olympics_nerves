@@ -11,6 +11,14 @@ use Mix.Config
 
 # import_config "#{Mix.Project.config[:target]}.exs"
 
+config :nerves, :firmware,
+  rootfs_additions: "rootfs-additions"
+
+config :beam_olympics_nerves, :wlan0,
+  ssid: System.get_env("BO_WLAN_SSID"),
+  psk: System.get_env("BO_WLAN_PSK"),
+  key_mgmt: :"WPA-PSK"
+
 config :mnesia,
   debug: true
 

@@ -14,3 +14,6 @@ erl_crash.dump
 
 # mnesia db
 /Mnesia*
+
+# environment variables
+.envrc
